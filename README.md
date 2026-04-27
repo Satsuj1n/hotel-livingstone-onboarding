@@ -26,10 +26,14 @@ Implementação evolutiva do site fictício "Hotel Livingstone" em Liferay 7.4 C
 
 ```bash
 cd workspace/
-blade server init    # primeira vez — baixa bundle ~500MB
-# Editar bundles/tomcat-*/conf/server.xml e trocar port="8080" por port="8081"
-blade server start
-# Aguarde ~15s e abra http://localhost:8081
+blade server init    # primeira vez — baixa bundle ~500MB (ou usa cache em ~/.liferay/bundles/)
+
+# Trocar porta 8080 por 8081 (evita conflito com Liferay GDF):
+sed -i '' 's/port="8080"/port="8081"/g' bundles/tomcat/conf/server.xml
+
+blade server run     # foreground (logs visíveis); use 'start' pra background
+# Aguardar ~30-90s pelo log "Liferay 7.4.X.X (Athanasius) started in N.Ns"
+# Abrir http://localhost:8081
 ```
 
 ## Estrutura do repo
