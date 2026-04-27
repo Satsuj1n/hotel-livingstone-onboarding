@@ -16,13 +16,15 @@ Sub-dividido em 3 fases internas:
 
 | Task | Status | Commit |
 |---|---|---|
-| 1. README + ROADMAP iniciais | 🚧 | — |
-| 2. ADR-001 workspace nativo no M1 | ⏸️ | — |
-| 3. Inicializar Liferay Workspace | ⏸️ | — |
-| 4. Baixar bundle + ajustar porta + iniciar Liferay | ⏸️ | — |
-| 5. Setup admin + login | ⏸️ | — |
-| 6. Criar site + 6 pages | ⏸️ | — |
-| 7. Multi-idioma PT/EN | ⏸️ | — |
+| 1. README + ROADMAP iniciais | ✅ | `7c8050c` |
+| 2. ADR-001 workspace nativo no M1 | ✅ | `ec16ded` |
+| Setup Java 21 Liberica + `.sdkmanrc` (extra) | ✅ | `46583c3` |
+| Atualização stack GA129 → GA132 (extra) | ✅ | `781eeb3` |
+| 3. Inicializar Liferay Workspace | ✅ | `d2032a1` |
+| 4. Baixar bundle + ajustar porta + iniciar Liferay | ✅ | `a7b6553` |
+| 5. Setup admin + login | ✅ | `93edb84` |
+| 6. Criar site + 6 pages | ✅ | _(este commit)_ |
+| 7. Multi-idioma PT/EN | 🚧 PRÓXIMA | — |
 | 8. Navigation menu principal | ⏸️ | — |
 | 9. Retrospectiva M1.1 + tag git | ⏸️ | — |
 
