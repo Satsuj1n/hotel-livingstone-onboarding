@@ -8,7 +8,7 @@
 
 ## Contexto
 
-O projeto Hotel Livingstone precisa de uma instância Liferay 7.4 CE GA129 rodando localmente pra desenvolvimento. O ambiente do desenvolvedor (macOS, Apple Silicon, Docker Desktop instalado) suporta múltiplas estratégias de deploy local.
+O projeto Hotel Livingstone precisa de uma instância Liferay 7.4 CE GA132 rodando localmente pra desenvolvimento. O ambiente do desenvolvedor (macOS, Apple Silicon, Docker Desktop instalado) suporta múltiplas estratégias de deploy local.
 
 Restrição importante: o workspace GDF (`~/Documents/SEA/dados-aberto-lf7_4-workspace/`) já roda Liferay nativo na porta 8080. O Hotel Livingstone precisa coexistir sem conflito.
 

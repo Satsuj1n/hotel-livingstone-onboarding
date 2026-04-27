@@ -4,7 +4,7 @@ Projeto pessoal de onboarding na SEA Tecnologia cobrindo os desafios backend Lif
 
 ## O que é
 
-Implementação evolutiva do site fictício "Hotel Livingstone" em Liferay 7.4 CE GA129. Cada milestone adiciona uma camada técnica nova:
+Implementação evolutiva do site fictício "Hotel Livingstone" em Liferay 7.4 CE GA132. Cada milestone adiciona uma camada técnica nova:
 
 - **M1 (até 25/05/2026):** Site funcional via UI (Pages, Web Content, Fragments, Theme, Navigation, multi-idioma PT/EN)
 - **M2 (até 29/06/2026):** Workflow Kaleo + dynamic content + migração pra Docker Compose
@@ -12,7 +12,7 @@ Implementação evolutiva do site fictício "Hotel Livingstone" em Liferay 7.4 C
 
 ## Stack
 
-- Liferay 7.4 CE GA129
+- Liferay 7.4 CE GA132
 - Java 21 (Liberica)
 - Blade CLI 8.0.0
 - Gradle (via wrapper)
