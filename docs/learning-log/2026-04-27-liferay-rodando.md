@@ -18,3 +18,10 @@
 ## Dúvida aberta
 
 - Achei tranquilo até aqui — quase tudo é boilerplate de configuração inicial. A real começa nas próximas tasks (criar o site, multi-idioma, navegação). Sem dúvida técnica concreta no momento.
+
+## Setup admin (Task 5)
+
+- Setup Wizard vem **desabilitado por padrão no bundle GA132** (`setup.wizard.enabled=false` em `portal-setup-wizard.properties`). Pra forçar rodar: setar pra `true` + apagar `bundles/data` + `bundles/osgi/state` + `bundles/work` + restartar.
+- `portal-setup-wizard.properties` é **write-back**: após Finish Configuration, o Liferay reescreve o arquivo com os valores que você preencheu (`company.default.name=Hotel Livingstone`, `company.default.locale=pt_BR`, `default.admin.first.name=Felipe`, etc.) + desliga a flag de novo. Útil pra reproduzir o setup em outra máquina copiando esse arquivo.
+- Fluxo do wizard no GA132: **Basic Configuration → Termos de Uso → Criação da senha do admin → Home logado**. A senha do admin é definida na 3ª tela (não usa default `test` se você passar pelo wizard completo).
+- Procedimento de reset Liferay (parar → limpar 3 pastas → reativar wizard → restart) testado e documentado em `docs/credenciais.md` (gitignored). Se esquecer a senha do admin, o caminho é resetar a instância inteira (HSQL não tem hash recover trivial).
