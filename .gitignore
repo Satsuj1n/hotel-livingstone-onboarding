@@ -1,0 +1,35 @@
+# Liferay bundle (re-baixável via blade server init, ~500MB)
+workspace/bundles/
+
+# Gradle
+workspace/.gradle/
+workspace/build/
+**/build/
+**/.gradle/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+
+# AI tooling residual (caso blade regenere)
+workspace/.claude/
+workspace/.cursor/
+workspace/.gemini/
+workspace/.windsurf/
+workspace/.workspace-rules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Liferay logs e temp
+**/logs/
+**/temp/
+**/work/
+
+# Credenciais locais (Task 5 vai criar)
+docs/credenciais.md
