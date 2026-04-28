@@ -4,7 +4,7 @@ Cronograma e checkpoints dos 3 milestones do projeto. Datas contratuais (apresen
 
 | Milestone | Data | Cursos cobertos | Status |
 |---|---|---|---|
-| **M1** — Site via UI | 2026-05-25 | Liferay Fundamentals + Content Creator | 🚧 Em execução (M1.1) |
+| **M1** — Site via UI | 2026-05-25 | Liferay Fundamentals + Content Creator | 🚧 Em execução (M1.2 próximo) |
 | **M2** — Workflow + Docker | 2026-06-29 | Liferay Content Management | ⏸️ Bloqueado por M1 |
 | **M3** — SB + REST + Tests + Upgrade C | 2026-07-27 | Service Builder + REST Builder + Junior I/II/III + Pleno I/II via workshop | ⏸️ Bloqueado por M2 |
 
@@ -12,7 +12,7 @@ Cronograma e checkpoints dos 3 milestones do projeto. Datas contratuais (apresen
 
 Sub-dividido em 3 fases internas:
 
-### M1.1 — Setup + Site base ⬅️ ATUAL
+### M1.1 — Setup + Site base ✅
 
 | Task | Status | Commit |
 |---|---|---|
@@ -25,8 +25,8 @@ Sub-dividido em 3 fases internas:
 | 5. Setup admin + login | ✅ | `93edb84` |
 | 6. Criar site + 6 pages | ✅ | `5d51bac` |
 | 7. Multi-idioma PT/EN | ✅ | `b3462d2` |
-| 8. Navigation menu principal | ✅ | _(este commit)_ |
-| 9. Retrospectiva M1.1 + tag git | ⏸️ | — |
+| 8. Navigation menu principal | ✅ | `b3397eb` |
+| 9. Retrospectiva M1.1 + tag git | ✅ | _(este commit)_ |
 
 ### M1.2 — Tema + Web Content + Fragments
 A planejar após conclusão de M1.1.
