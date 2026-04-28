@@ -24,8 +24,8 @@ Sub-dividido em 3 fases internas:
 | 4. Baixar bundle + ajustar porta + iniciar Liferay | ✅ | `a7b6553` |
 | 5. Setup admin + login | ✅ | `93edb84` |
 | 6. Criar site + 6 pages | ✅ | `5d51bac` |
-| 7. Multi-idioma PT/EN | ✅ | _(este commit)_ |
-| 8. Navigation menu principal | ⏸️ | — |
+| 7. Multi-idioma PT/EN | ✅ | `b3462d2` |
+| 8. Navigation menu principal | ✅ | _(este commit)_ |
 | 9. Retrospectiva M1.1 + tag git | ⏸️ | — |
 
 ### M1.2 — Tema + Web Content + Fragments
