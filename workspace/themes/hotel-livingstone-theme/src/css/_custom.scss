@@ -8,3 +8,69 @@
 /* endinject */
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+/* =============================================================================
+   Hotel Livingstone — Design Tokens (Dracula + Apple dark)
+   Fragments and theme components consume these via var(--hl-*).
+   Change here = change everywhere.
+   ============================================================================= */
+
+:root {
+	/* Surfaces — elevation hierarchy (dark mode uses gray layers, not borders/shadows) */
+	--hl-background: #1A1B26;
+	--hl-surface: #24253A;
+	--hl-surface-elevated: #2D2E48;
+
+	/* Text */
+	--hl-text: #F8F8F2;
+	--hl-text-muted: #BFBFD0;
+	--hl-text-subtle: #6E6E8C;
+
+	/* Accents — 1 brand color + 2 supporting */
+	--hl-primary: #BD93F9;
+	--hl-secondary: #FF79C6;
+	--hl-accent: #50FA7B;
+
+	/* Typography — Apple system stack with Inter fallback */
+	--hl-font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+	--hl-font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
+
+	/* Spacing scale */
+	--hl-spacing-xs: 0.25rem;
+	--hl-spacing-sm: 0.5rem;
+	--hl-spacing-md: 1rem;
+	--hl-spacing-lg: 2rem;
+	--hl-spacing-xl: 4rem;
+
+	/* Border radius — Apple-like generous */
+	--hl-radius-sm: 6px;
+	--hl-radius-md: 12px;
+	--hl-radius-lg: 20px;
+
+	/* Transitions */
+	--hl-transition-fast: 150ms ease;
+	--hl-transition-default: 300ms ease;
+}
+
+body {
+	font-family: var(--hl-font-body);
+	background-color: var(--hl-background);
+	color: var(--hl-text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--hl-font-heading);
+	color: var(--hl-text);
+	letter-spacing: -0.02em;
+}
+
+a {
+	color: var(--hl-primary);
+	transition: color var(--hl-transition-fast);
+}
+
+a:hover, a:focus-visible {
+	color: var(--hl-secondary);
+}
