@@ -74,3 +74,96 @@ a {
 a:hover, a:focus-visible {
 	color: var(--hl-secondary);
 }
+
+/* =============================================================================
+   Hotel Livingstone — Shell layout (header / main / footer)
+   ============================================================================= */
+
+.hl-shell {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.hl-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: var(--hl-surface);
+	border-bottom: 1px solid var(--hl-surface-elevated);
+	backdrop-filter: saturate(180%) blur(12px);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: var(--hl-spacing-md) var(--hl-spacing-lg);
+		gap: var(--hl-spacing-lg);
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: var(--hl-spacing-sm);
+		text-decoration: none;
+		color: var(--hl-text);
+		transition: opacity var(--hl-transition-fast);
+
+		img {
+			height: 48px;
+			width: auto;
+			display: block;
+		}
+
+		&:hover, &:focus-visible {
+			opacity: 0.85;
+			color: var(--hl-text);
+		}
+	}
+
+	&__brand {
+		font-family: var(--hl-font-heading);
+		font-size: 1.125rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		white-space: nowrap;
+	}
+
+	&__nav {
+		ul {
+			display: flex;
+			gap: var(--hl-spacing-lg);
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			color: var(--hl-text-muted);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.9375rem;
+			padding: var(--hl-spacing-xs) 0;
+			border-bottom: 2px solid transparent;
+			transition:
+				color var(--hl-transition-fast),
+				border-color var(--hl-transition-fast);
+
+			&:hover, &:focus-visible {
+				color: var(--hl-text);
+			}
+		}
+
+		.is-active a {
+			color: var(--hl-primary);
+			border-bottom-color: var(--hl-primary);
+		}
+	}
+}
+
+.hl-main {
+	flex: 1;
+	padding: var(--hl-spacing-lg) 0;
+}
