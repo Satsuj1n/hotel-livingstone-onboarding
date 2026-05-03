@@ -22,6 +22,11 @@ workspace/.gemini/
 workspace/.windsurf/
 workspace/.workspace-rules/
 
+# Liferay Gradle plugin gera no workspace root (frontend asset pipeline — não versionar)
+workspace/.yarnrc
+workspace/package.json
+workspace/yarn.lock
+
 # OS
 .DS_Store
 Thumbs.db
