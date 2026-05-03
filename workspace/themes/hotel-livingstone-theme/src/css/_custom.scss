@@ -1,0 +1,243 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+
+@import 'liferay-font-awesome/scss/font-awesome';
+@import 'liferay-font-awesome/scss/glyphicons';
+
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+/* =============================================================================
+   Hotel Livingstone — Design Tokens (Dracula + Apple dark)
+   Fragments and theme components consume these via var(--hl-*).
+   Change here = change everywhere.
+   ============================================================================= */
+
+:root {
+	/* Surfaces — elevation hierarchy (dark mode uses gray layers, not borders/shadows) */
+	--hl-background: #1A1B26;
+	--hl-surface: #24253A;
+	--hl-surface-elevated: #2D2E48;
+
+	/* Text */
+	--hl-text: #F8F8F2;
+	--hl-text-muted: #BFBFD0;
+	--hl-text-subtle: #6E6E8C;
+
+	/* Accents — 1 brand color + 2 supporting */
+	--hl-primary: #BD93F9;
+	--hl-secondary: #FF79C6;
+	--hl-accent: #50FA7B;
+
+	/* Typography — Apple system stack with Inter fallback */
+	--hl-font-heading: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif;
+	--hl-font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif;
+
+	/* Spacing scale */
+	--hl-spacing-xs: 0.25rem;
+	--hl-spacing-sm: 0.5rem;
+	--hl-spacing-md: 1rem;
+	--hl-spacing-lg: 2rem;
+	--hl-spacing-xl: 4rem;
+
+	/* Border radius — Apple-like generous */
+	--hl-radius-sm: 6px;
+	--hl-radius-md: 12px;
+	--hl-radius-lg: 20px;
+
+	/* Transitions */
+	--hl-transition-fast: 150ms ease;
+	--hl-transition-default: 300ms ease;
+}
+
+body {
+	font-family: var(--hl-font-body);
+	background-color: var(--hl-background);
+	color: var(--hl-text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--hl-font-heading);
+	color: var(--hl-text);
+	letter-spacing: -0.02em;
+}
+
+a {
+	color: var(--hl-primary);
+	transition: color var(--hl-transition-fast);
+}
+
+a:hover, a:focus-visible {
+	color: var(--hl-secondary);
+}
+
+/* =============================================================================
+   Hotel Livingstone — Shell layout (header / main / footer)
+   ============================================================================= */
+
+.hl-shell {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.hl-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: var(--hl-surface);
+	border-bottom: 1px solid var(--hl-surface-elevated);
+	backdrop-filter: saturate(180%) blur(12px);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: var(--hl-spacing-md) var(--hl-spacing-lg);
+		gap: var(--hl-spacing-lg);
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: var(--hl-spacing-sm);
+		text-decoration: none;
+		color: var(--hl-text);
+		transition: opacity var(--hl-transition-fast);
+
+		img {
+			height: 48px;
+			width: auto;
+			display: block;
+		}
+
+		&:hover, &:focus-visible {
+			opacity: 0.85;
+			color: var(--hl-text);
+		}
+	}
+
+	&__brand {
+		font-family: var(--hl-font-heading);
+		font-size: 1.125rem;
+		font-weight: 500;
+		letter-spacing: -0.01em;
+		white-space: nowrap;
+	}
+
+	&__nav {
+		ul {
+			display: flex;
+			gap: var(--hl-spacing-lg);
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			color: var(--hl-text-muted);
+			text-decoration: none;
+			font-weight: 500;
+			font-size: 0.9375rem;
+			padding: var(--hl-spacing-xs) 0;
+			border-bottom: 2px solid transparent;
+			transition:
+				color var(--hl-transition-fast),
+				border-color var(--hl-transition-fast);
+
+			&:hover, &:focus-visible {
+				color: var(--hl-text);
+			}
+		}
+
+		.is-active a {
+			color: var(--hl-primary);
+			border-bottom-color: var(--hl-primary);
+		}
+	}
+}
+
+.hl-main {
+	flex: 1;
+	padding: var(--hl-spacing-lg) 0;
+}
+
+.hl-footer {
+	background-color: var(--hl-surface);
+	border-top: 1px solid var(--hl-surface-elevated);
+	color: var(--hl-text-muted);
+	padding: var(--hl-spacing-xl) 0 var(--hl-spacing-lg);
+	margin-top: auto;
+
+	&__container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 var(--hl-spacing-lg);
+		display: grid;
+		gap: var(--hl-spacing-lg);
+		grid-template-columns: 1fr;
+
+		@media (min-width: 768px) {
+			grid-template-columns: 2fr 1fr;
+			grid-template-areas:
+				"brand links"
+				"copyright copyright";
+		}
+	}
+
+	&__brand {
+		grid-area: brand;
+
+		strong {
+			display: block;
+			font-family: var(--hl-font-heading);
+			font-size: 1.125rem;
+			color: var(--hl-text);
+			letter-spacing: -0.01em;
+			margin-bottom: var(--hl-spacing-xs);
+		}
+
+		p {
+			margin: 0;
+			color: var(--hl-text-subtle);
+			font-size: 0.9375rem;
+		}
+	}
+
+	&__links {
+		grid-area: links;
+		display: flex;
+		gap: var(--hl-spacing-md);
+		align-items: flex-start;
+
+		@media (min-width: 768px) {
+			justify-content: flex-end;
+		}
+
+		a {
+			color: var(--hl-text-muted);
+			text-decoration: none;
+			font-size: 0.9375rem;
+			transition: color var(--hl-transition-fast);
+
+			&:hover, &:focus-visible {
+				color: var(--hl-primary);
+			}
+		}
+	}
+
+	&__copyright {
+		grid-area: copyright;
+		border-top: 1px solid var(--hl-surface-elevated);
+		padding-top: var(--hl-spacing-md);
+		margin: var(--hl-spacing-md) 0 0;
+		font-size: 0.8125rem;
+		color: var(--hl-text-subtle);
+	}
+}
