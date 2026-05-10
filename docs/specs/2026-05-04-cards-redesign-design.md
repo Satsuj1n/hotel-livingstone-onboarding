@@ -185,7 +185,7 @@ CSS do fragment substitui completamente o atual. Mantém uso de CSS vars do tema
   font-size: 12px;
   padding: 8px 16px;
   background: var(--hl-primary);
-  color: var(--hl-bg, #1a1b26);
+  color: var(--hl-background, #1a1b26);
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
@@ -193,7 +193,7 @@ CSS do fragment substitui completamente o atual. Mantém uso de CSS vars do tema
 }
 
 .hl-btn--small:hover {
-  background: var(--hl-pink);
+  background: var(--hl-secondary);
 }
 ```
 
