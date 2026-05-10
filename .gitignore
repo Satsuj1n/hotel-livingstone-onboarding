@@ -38,3 +38,9 @@ Thumbs.db
 
 # Credenciais locais (Task 5 vai criar)
 docs/credenciais.md
+
+# Superpowers brainstorming visual companion (mockups locais, não versionar)
+.superpowers/
+
+# Screenshots de validação Chrome DevTools MCP (artefatos de sessão, não versionar)
+.tmp-screenshots/
