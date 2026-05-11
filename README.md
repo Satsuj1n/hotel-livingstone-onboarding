@@ -1,4 +1,4 @@
-# Hotel Livingstone — Onboarding Liferay SEA
+# Hotel Livingstone — Onboarding Liferay
 
 Projeto pessoal de onboarding na SEA Tecnologia cobrindo os desafios backend Liferay de 30/60/90 dias + trilha de carreira Junior I/II/III + Pleno I/II.
 
