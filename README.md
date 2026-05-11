@@ -48,4 +48,4 @@ Ver [ROADMAP.md](./ROADMAP.md) e [docs/specs/2026-04-26-design.md](./docs/specs/
 
 ## Autor
 
-Felipe Lima (felipenehz2003@gmail.com) — backend dev na SEA Tecnologia desde abril/2026.
+Felipe Lima (felipenehz2003@gmail.com)
